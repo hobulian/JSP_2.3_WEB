@@ -109,7 +109,7 @@
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping-->
 
-    <filter>
+    <!--filter>
         <filter-name>LoginCheck</filter-name>
         <filter-class>filter.LoginCheckFilter</filter-class>
     </filter>
@@ -117,5 +117,30 @@
     <filter-mapping>
         <filter-name>LoginCheck</filter-name>
         <url-pattern>/chap19/board/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping-->
+
+    <!--filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>util.CharacterEncodingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping-->
+
+    <listener>
+        <listener-class>jdbc.DBCPInitListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>poolConfig</param-name>
+        <param-value>
+            jdbcdriver=com.mysql.cj.jdbc.Driver
+            jdbcUrl=jdbc:mysql://localhost:3306/chap14?characterEncoding=utf8
+            dbUser=jspexam
+            dbPass=jsppw
+            poolName=chap20
+        </param-value>
+    </context-param>
 </web-app>
