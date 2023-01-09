@@ -16,7 +16,7 @@ MEMBER 테이블의 내용
     </tr>
     <%
         // 1. JDBC 드라이버 로딩
-        //Class.forName("com.mysql.cj.jdbc.Driver");
+        // Class.forName("com.mysql.cj.jdbc.Driver");
 
         Connection conn = null;
         Statement stmt = null;
